@@ -41,7 +41,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-full max-w-full min-h-screen bg-[#F6F2EC] text-[#1E252B] selection:bg-[#9E2A2B] selection:text-white flex flex-col font-sans transition-colors overflow-x-hidden">
+    <div className="w-full max-w-full min-h-screen bg-[#FBF9F5] text-[#111827] selection:bg-[#9E2A2B] selection:text-white flex flex-col font-sans transition-colors overflow-x-hidden">
       {/* Sticky Header with 3-Zone Contract */}
       <Navbar
         onOpenResume={() => setIsResumeOpen(true)}

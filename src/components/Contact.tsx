@@ -74,51 +74,51 @@ export function Contact() {
           <h2 className="text-xs font-mono text-[#9E2A2B] uppercase tracking-widest font-semibold">
             Connect &amp; Engage
           </h2>
-          <p className="text-2xl sm:text-3xl font-bold text-[#1E252B] mt-1 break-words">
+          <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1 break-words">
             Let's Architect Something Resilient
           </p>
         </div>
 
-        <p className="text-[#5C6773] text-xs sm:text-sm leading-relaxed break-words">
+        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
           Available for principal systems architecture, application delivery leadership, server environments (LAMP, cPanel), cloud deployment (GitHub, Vercel), SPAs, and healthcare compliance governance (CalAIM / ECM / HIPAA).
         </p>
 
         {/* Quick Contact & Availability Strip */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-mono text-[#5C6773] pt-2 max-w-full">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-mono text-gray-600 pt-2 max-w-full">
           <div className="flex items-center gap-1.5 whitespace-nowrap">
             <MapPin className="w-3.5 h-3.5 text-[#9E2A2B] shrink-0" />
             <span>Los Angeles, CA (PST)</span>
           </div>
-          <span className="text-[#A39B8F] hidden sm:inline">·</span>
+          <span className="text-gray-400 hidden sm:inline">·</span>
           <div className="flex items-center gap-1.5 whitespace-nowrap">
-            <Clock className="w-3.5 h-3.5 text-[#2D6A4F] shrink-0" />
+            <Clock className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
             <span>Response within 24 hrs</span>
           </div>
-          <span className="text-[#A39B8F] hidden sm:inline">·</span>
+          <span className="text-gray-400 hidden sm:inline">·</span>
           <button
             onClick={handleCopyEmail}
-            className="flex items-center gap-1.5 text-[#2C353D] hover:text-[#9E2A2B] transition-colors whitespace-nowrap"
+            className="flex items-center gap-1.5 text-gray-800 hover:text-[#9E2A2B] transition-colors whitespace-nowrap"
           >
-            <Mail className="w-3.5 h-3.5 text-[#6A4C93] shrink-0" />
+            <Mail className="w-3.5 h-3.5 text-[#005596] shrink-0" />
             <span>{copiedEmail ? 'Email Copied!' : directEmail}</span>
-            {copiedEmail ? <Check className="w-3 h-3 text-[#2D6A4F]" /> : <Copy className="w-3 h-3 text-[#7C8794]" />}
+            {copiedEmail ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3 text-gray-500" />}
           </button>
         </div>
 
         {/* Form Container */}
         {isSubmitted ? (
-          <div className="mt-8 p-6 sm:p-8 bg-white border border-[#2D6A4F]/40 rounded-2xl text-left space-y-4 shadow-sm animate-in fade-in min-w-0">
-            <div className="flex items-center gap-3 text-[#2D6A4F]">
+          <div className="mt-8 p-6 sm:p-8 bg-white border border-emerald-500/40 rounded-xl text-left space-y-4 shadow-sm animate-in fade-in min-w-0">
+            <div className="flex items-center gap-3 text-emerald-700">
               <CheckCircle2 className="w-6 h-6 shrink-0" />
-              <h3 className="text-base sm:text-lg font-bold text-[#1E252B] break-words">Direct Message Prepared &amp; Queued</h3>
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 break-words">Direct Message Prepared &amp; Queued</h3>
             </div>
-            <p className="text-xs sm:text-sm text-[#48535E] leading-relaxed break-words">
-              Thank you, <span className="font-semibold text-[#1E252B]">{formData.name}</span>. Your inquiry regarding <span className="font-mono text-[#9E2A2B] font-semibold">{formData.projectType}</span> has been received.
+            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed break-words">
+              Thank you, <span className="font-semibold text-gray-900">{formData.name}</span>. Your inquiry regarding <span className="font-mono text-[#9E2A2B] font-semibold">{formData.projectType}</span> has been received.
             </p>
-            <div className="bg-[#FAF7F3] p-4 rounded-xl border border-[#E2DAD0] text-xs font-mono text-[#2C353D] space-y-1 overflow-hidden min-w-0">
-              <div className="text-[#7C8794] truncate">From: {formData.name} &lt;{formData.email}&gt;</div>
-              <div className="text-[#7C8794] truncate">Subject: {formData.projectType} Consultation</div>
-              <div className="pt-2 text-[#1E252B] whitespace-pre-line border-t border-[#EAE4DC] break-words">
+            <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 text-xs font-mono text-gray-800 space-y-1 overflow-hidden min-w-0">
+              <div className="text-gray-500 truncate">From: {formData.name} &lt;{formData.email}&gt;</div>
+              <div className="text-gray-500 truncate">Subject: {formData.projectType} Consultation</div>
+              <div className="pt-2 text-gray-900 whitespace-pre-line border-t border-gray-200 break-words">
                 "{formData.message}"
               </div>
             </div>
@@ -135,7 +135,7 @@ export function Contact() {
                   setIsSubmitted(false);
                   setFormData({ name: '', email: '', projectType: 'Architecture & Delivery', message: '' });
                 }}
-                className="px-4 py-2.5 bg-[#EFEAE1] hover:bg-[#E4DCCE] text-[#2C353D] rounded-lg text-xs font-medium transition-colors whitespace-nowrap"
+                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-xs font-medium transition-colors whitespace-nowrap"
               >
                 Send Another Message
               </button>
@@ -144,14 +144,14 @@ export function Contact() {
         ) : (
           <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left w-full min-w-0">
             {errorMsg && (
-              <div className="p-3 rounded-lg bg-[#9E2A2B]/10 border border-[#9E2A2B]/30 text-[#9E2A2B] text-xs font-mono break-words">
+              <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-[#9E2A2B] text-xs font-mono break-words">
                 {errorMsg}
               </div>
             )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
               <div className="min-w-0">
-                <label className="block text-xs font-mono uppercase text-[#5C6773] mb-1.5 font-semibold">
+                <label className="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-semibold">
                   Your Name *
                 </label>
                 <input
@@ -160,12 +160,12 @@ export function Contact() {
                   placeholder="e.g. Alex Morgan"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-white border border-[#D5CCC0] rounded-lg px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-[#1E252B] placeholder-[#9CA3AF] focus:outline-none focus:border-[#9E2A2B] focus:ring-1 focus:ring-[#9E2A2B]/30 transition-colors shadow-xs"
+                  className="w-full bg-white border border-gray-200 rounded-lg px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#9E2A2B] focus:ring-1 focus:ring-[#9E2A2B]/30 transition-colors shadow-xs"
                 />
               </div>
 
               <div className="min-w-0">
-                <label className="block text-xs font-mono uppercase text-[#5C6773] mb-1.5 font-semibold">
+                <label className="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-semibold">
                   Your Email *
                 </label>
                 <input
@@ -174,14 +174,14 @@ export function Contact() {
                   placeholder="alex@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-white border border-[#D5CCC0] rounded-lg px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-[#1E252B] placeholder-[#9CA3AF] focus:outline-none focus:border-[#9E2A2B] focus:ring-1 focus:ring-[#9E2A2B]/30 transition-colors shadow-xs"
+                  className="w-full bg-white border border-gray-200 rounded-lg px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#9E2A2B] focus:ring-1 focus:ring-[#9E2A2B]/30 transition-colors shadow-xs"
                 />
               </div>
             </div>
 
             {/* Project / Engagement Type Selector */}
             <div className="min-w-0">
-              <label className="block text-xs font-mono uppercase text-[#5C6773] mb-1.5 font-semibold">
+              <label className="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-semibold">
                 Area of Engagement
               </label>
               <div className="flex flex-wrap gap-2">
@@ -193,7 +193,7 @@ export function Contact() {
                     className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all whitespace-nowrap ${
                       formData.projectType === type
                         ? 'bg-[#9E2A2B]/10 text-[#9E2A2B] border border-[#9E2A2B]/40 font-semibold'
-                        : 'bg-[#EFEAE1] text-[#48535E] border border-[#D5CCC0] hover:text-[#1E252B] hover:bg-[#E4DCCE]'
+                        : 'bg-gray-100 text-gray-700 border border-gray-200 hover:text-gray-900 hover:bg-gray-200'
                     }`}
                   >
                     {type}
@@ -203,7 +203,7 @@ export function Contact() {
             </div>
 
             <div className="min-w-0">
-              <label className="block text-xs font-mono uppercase text-[#5C6773] mb-1.5 font-semibold">
+              <label className="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-semibold">
                 Project Details or Message *
               </label>
               <textarea
@@ -212,7 +212,7 @@ export function Contact() {
                 placeholder="Describe your technical architecture goals, timeline, or operational needs..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-white border border-[#D5CCC0] rounded-lg px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-[#1E252B] placeholder-[#9CA3AF] focus:outline-none focus:border-[#9E2A2B] focus:ring-1 focus:ring-[#9E2A2B]/30 transition-colors shadow-xs"
+                className="w-full bg-white border border-gray-200 rounded-lg px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#9E2A2B] focus:ring-1 focus:ring-[#9E2A2B]/30 transition-colors shadow-xs"
               />
             </div>
 

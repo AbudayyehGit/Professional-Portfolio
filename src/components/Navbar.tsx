@@ -46,19 +46,19 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
   ];
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-[#F6F2EC]/90 border-b border-[#E2DAD0] transition-colors shadow-xs w-full max-w-full overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between min-w-0">
+    <header className="sticky top-0 z-40 backdrop-blur-md bg-[#FBF9F5]/90 border-b border-gray-200 transition-colors shadow-xs w-full max-w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between min-w-0">
         {/* Zone 1: Single text element wordmark */}
         <a 
           href="#" 
-          className="font-mono font-bold text-base sm:text-lg tracking-tight text-[#1E252B] hover:text-[#9E2A2B] transition-colors shrink-0"
+          className="font-mono font-bold text-base sm:text-lg tracking-tight text-gray-900 hover:text-[#9E2A2B] transition-colors shrink-0"
           title="Joe Abudayyeh - Systems Architect | Application Delivery Lead"
         >
           JOE<span className="text-[#9E2A2B]">.DEV</span>
         </a>
 
         {/* Zone 2: 4-6 text navigation links */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium text-[#48535E]">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium text-gray-700">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -66,7 +66,7 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
                 key={link.href}
                 href={link.href}
                 className={`transition-colors relative py-1 hover:text-[#9E2A2B] ${
-                  isActive ? 'text-[#9E2A2B] font-semibold' : 'text-[#48535E]'
+                  isActive ? 'text-[#9E2A2B] font-semibold' : 'text-gray-700'
                 }`}
               >
                 {link.label}
@@ -97,7 +97,7 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
             className={`hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono transition-colors border ${
               isTerminalOpen
                 ? 'bg-[#9E2A2B]/10 text-[#9E2A2B] border-[#9E2A2B]/30'
-                : 'bg-[#EFEAE1] hover:bg-[#E6DEC2] text-[#2C353D] border-[#D5CCC0]'
+                : 'bg-white hover:bg-gray-100 text-gray-800 border-gray-200'
             }`}
             title="Toggle Systems Terminal"
           >
@@ -108,18 +108,18 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
           {/* Resume Dossier Quick View */}
           <button
             onClick={onOpenResume}
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-[#EFEAE1] hover:bg-[#E4DCCE] text-[#2C353D] border border-[#D5CCC0] transition-all hover:text-[#1E252B] whitespace-nowrap"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white hover:bg-gray-100 text-gray-800 border border-gray-200 transition-all hover:text-gray-900 whitespace-nowrap"
           >
-            <FileText className="w-3.5 h-3.5 text-[#6A4C93]" />
+            <FileText className="w-3.5 h-3.5 text-[#005596]" />
             <span>Dossier</span>
           </button>
 
           {/* Availability Status Badge (Kishwaukee Forest) */}
           <a
             href="#contact"
-            className="inline-flex items-center px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-mono font-medium bg-[#2D6A4F]/10 text-[#2D6A4F] border border-[#2D6A4F]/25 hover:bg-[#2D6A4F]/20 transition-colors whitespace-nowrap"
+            className="inline-flex items-center px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors whitespace-nowrap"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2D6A4F] mr-1.5 animate-pulse shrink-0"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mr-1.5 animate-pulse shrink-0"></span>
             <span className="hidden sm:inline">Available for Hire</span>
             <span className="sm:hidden">Available</span>
           </a>
@@ -127,7 +127,7 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-1.5 text-[#48535E] hover:text-[#1E252B] rounded-lg hover:bg-[#EFEAE1] transition-colors"
+            className="md:hidden p-1.5 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -137,18 +137,18 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-[#E2DAD0] bg-[#F6F2EC] px-4 py-4 space-y-3">
+        <div className="md:hidden border-b border-gray-200 bg-[#FBF9F5] px-4 py-4 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm font-medium text-[#2C353D] hover:text-[#9E2A2B] py-1.5"
+              className="block text-sm font-medium text-gray-800 hover:text-[#9E2A2B] py-1.5"
             >
               {link.label}
             </a>
           ))}
-          <div className="pt-2 border-t border-[#E2DAD0] flex flex-col gap-2">
+          <div className="pt-2 border-t border-gray-200 flex flex-col gap-2">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
@@ -165,7 +165,7 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
                   setMobileMenuOpen(false);
                   onToggleTerminal();
                 }}
-                className="flex-1 py-2 text-center text-xs font-mono bg-[#EFEAE1] rounded-lg text-[#2C353D] hover:text-[#1E252B] border border-[#D5CCC0]"
+                className="flex-1 py-2 text-center text-xs font-mono bg-white rounded-lg text-gray-800 hover:text-gray-900 border border-gray-200"
               >
                 Launch CLI Console
               </button>
@@ -174,7 +174,7 @@ export function Navbar({ onOpenResume, onOpenAssistant, onToggleTerminal, isTerm
                   setMobileMenuOpen(false);
                   onOpenResume();
                 }}
-                className="flex-1 py-2 text-center text-xs font-medium bg-[#FAF7F3] rounded-lg text-[#1E252B] border border-[#D5CCC0]"
+                className="flex-1 py-2 text-center text-xs font-medium bg-white rounded-lg text-gray-900 border border-gray-200"
               >
                 View Dossier
               </button>

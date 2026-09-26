@@ -77,17 +77,17 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
             <span className="font-mono text-xs text-[#9E2A2B] font-bold tracking-wider uppercase break-words">
               Joe Abudayyeh
             </span>
-            <span className="text-[#A39B8F] hidden sm:inline">·</span>
-            <span className="font-mono text-xs text-[#1E252B] font-semibold tracking-wider uppercase break-words">
+            <span className="text-gray-400 hidden sm:inline">·</span>
+            <span className="font-mono text-xs text-gray-900 font-semibold tracking-wider uppercase break-words">
               Systems Architect | Application Delivery Lead
             </span>
-            <span className="text-[#A39B8F] hidden sm:inline">·</span>
-            <span className="text-xs font-mono text-[#5C6773] break-words">Los Angeles, CA</span>
+            <span className="text-gray-400 hidden sm:inline">·</span>
+            <span className="text-xs font-mono text-gray-600 break-words">Los Angeles, CA</span>
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1E252B] leading-tight break-words max-w-full"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight break-words max-w-full"
             style={{ textWrap: 'balance' }}
           >
             Engineering robust systems, dynamic web apps, &amp; clear technical narrative.
@@ -95,7 +95,7 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
 
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg text-[#48535E] leading-relaxed max-w-2xl break-words"
+            className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl break-words"
           >
             Bridging direct technical execution with multi-site operational leadership. Proven systems architecture spanning decoupled single-page applications (React, Vite, TypeScript, SPAs), enterprise server environments (LAMP, cPanel), cloud deployment (GitHub, Vercel), backend services (C#, ASP.NET, Node.js, Rust, SQL), Python/Streamlit data tooling, and state-certified healthcare systems (CalMHSA/CalAIM).
           </motion.p>
@@ -112,7 +112,7 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
 
             <button
               onClick={onOpenAssistant}
-              className="px-4 sm:px-5 py-3 rounded-lg bg-[#FAF7F3] hover:bg-white border border-[#D5CCC0] text-[#9E2A2B] font-medium text-xs sm:text-sm transition-all flex items-center gap-2 shadow-xs whitespace-nowrap"
+              className="px-4 sm:px-5 py-3 rounded-lg bg-white hover:bg-gray-50 border border-gray-200 text-[#9E2A2B] font-medium text-xs sm:text-sm transition-all flex items-center gap-2 shadow-xs whitespace-nowrap"
             >
               <MessageSquareCode className="w-4 h-4 text-[#9E2A2B]" />
               <span>Ask Executive Assistant</span>
@@ -120,7 +120,7 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
 
             <button
               onClick={onOpenAnalytics}
-              className="px-3.5 sm:px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-[#D5CCC0] text-[#2D6A4F] font-mono text-xs transition-colors flex items-center gap-2 shadow-xs whitespace-nowrap"
+              className="px-3.5 sm:px-4 py-3 rounded-lg bg-white hover:bg-gray-50 border border-gray-200 text-[#2D6A4F] font-mono text-xs transition-colors flex items-center gap-2 shadow-xs whitespace-nowrap"
             >
               <span className="w-2 h-2 rounded-full bg-[#2D6A4F] animate-pulse" />
               <span>Launch Analytics Workbench</span>
@@ -130,43 +130,43 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
 
         {/* Right Column: Architectural Telemetry Card */}
         <motion.div variants={itemVariants} className="lg:col-span-4 min-w-0 w-full">
-          <div className="bg-white/95 border border-[#E2DAD0] rounded-2xl p-5 sm:p-6 backdrop-blur-sm space-y-4 shadow-sm min-w-0">
-            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC]">
-              <span className="text-xs font-mono text-[#5C6773] uppercase tracking-wider flex items-center gap-1.5 font-semibold">
+          <div className="bg-white border border-gray-200 rounded-xl p-5 sm:p-6 space-y-4 shadow-sm min-w-0">
+            <div className="flex items-center justify-between pb-3 border-b border-gray-100">
+              <span className="text-xs font-mono text-gray-600 uppercase tracking-wider flex items-center gap-1.5 font-semibold">
                 <Layers className="w-3.5 h-3.5 text-[#9E2A2B]" /> Delivery Metrics
               </span>
-              <span className="text-[11px] font-mono text-[#2D6A4F] flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2D6A4F]" /> Verified SLAs
+              <span className="text-[11px] font-mono text-emerald-700 flex items-center gap-1 font-medium bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" /> Verified SLAs
               </span>
             </div>
 
             <div className="space-y-3 font-mono text-xs">
-              <div className="flex justify-between items-center py-1 border-b border-[#EAE4DC]">
-                <span className="text-[#5C6773]">Server Environments</span>
-                <span className="text-[#1E252B] font-semibold">LAMP · cPanel · Linux</span>
+              <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                <span className="text-gray-600">Server Environments</span>
+                <span className="text-gray-900 font-semibold">LAMP · cPanel · Linux</span>
               </div>
-              <div className="flex justify-between items-center py-1 border-b border-[#EAE4DC]">
-                <span className="text-[#5C6773]">Cloud Deployments</span>
+              <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                <span className="text-gray-600">Cloud Deployments</span>
                 <span className="text-[#005596] font-semibold">GitHub CI/CD · Vercel</span>
               </div>
-              <div className="flex justify-between items-center py-1 border-b border-[#EAE4DC]">
-                <span className="text-[#5C6773]">Authored Literature</span>
-                <span className="text-[#6A4C93] font-semibold tabular-nums">2,000+ Pages</span>
+              <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                <span className="text-gray-600">Authored Literature</span>
+                <span className="text-gray-900 font-semibold tabular-nums">2,000+ Pages</span>
               </div>
-              <div className="flex justify-between items-center py-1 border-b border-[#EAE4DC]">
-                <span className="text-[#5C6773]">Core Pillars</span>
+              <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                <span className="text-gray-600">Core Pillars</span>
                 <span className="text-[#9E2A2B] font-semibold">App Dev &amp; Infrastructure</span>
               </div>
               <div className="flex justify-between items-center py-1">
-                <span className="text-[#5C6773]">Compliance Rigor</span>
-                <span className="text-[#2D6A4F] font-semibold">HIPAA · NIST · CalAIM</span>
+                <span className="text-gray-600">Compliance Rigor</span>
+                <span className="text-emerald-700 font-semibold">HIPAA · NIST · CalAIM</span>
               </div>
             </div>
 
             <div className="pt-2">
               <button
                 onClick={onOpenDocs}
-                className="w-full py-2.5 px-3 bg-[#EFEAE1] hover:bg-[#E4DCCE] border border-[#D5CCC0] rounded-xl text-xs font-mono text-[#6A4C93] hover:text-[#523A73] transition-colors flex items-center justify-between group"
+                className="w-full py-2.5 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-xs font-mono text-[#005596] hover:text-[#003d6b] transition-colors flex items-center justify-between group"
               >
                 <span>Browse Architectural Specs</span>
                 <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -182,7 +182,7 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-40px' }}
-        className="mt-12 sm:mt-16 pt-8 border-t border-[#E2DAD0] grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-xs w-full min-w-0"
+        className="mt-12 sm:mt-16 pt-8 border-t border-gray-200 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-xs w-full min-w-0"
       >
         {trustItems.map((item, idx) => (
           <div
@@ -190,13 +190,13 @@ export function Hero({ onOpenAnalytics, onOpenDocs, onOpenAssistant }: HeroProps
             className="group cursor-pointer space-y-1 min-w-0"
             onClick={() => setActiveTrustBadge(activeTrustBadge === idx ? null : idx)}
           >
-            <span className="block font-mono text-[#7C8794] uppercase tracking-wider text-[11px] truncate">
+            <span className="block font-mono text-gray-500 uppercase tracking-wider text-[11px] truncate">
               {item.label}
             </span>
-            <span className="font-semibold text-[#1E252B] group-hover:text-[#9E2A2B] transition-colors block break-words">
+            <span className="font-semibold text-gray-900 group-hover:text-[#9E2A2B] transition-colors block break-words">
               {item.value}
             </span>
-            <p className="text-[11px] text-[#5C6773] leading-relaxed pt-0.5 break-words">
+            <p className="text-[11px] text-gray-600 leading-relaxed pt-0.5 break-words">
               {item.tooltip}
             </p>
           </div>
